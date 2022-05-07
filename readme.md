@@ -65,7 +65,7 @@ To get a local copy up and running follow these simple example steps.
    to do so please go in the standalone folder and run the MaterilizeScript.py 
      ```sh
    cd ./standalone
-   python3 MaterilizeScript.py
+   ./MaterilizeScript
    ```
 6. Travel to http://127.0.0.1:9999/api/checkings/docs or http://127.0.0.1:9999/api/statistics/docs or http://127.0.0.1:9999/api/validations/docs or http://127.0.0.1:9999/api/trackers/docs (depends on the values inputted for which service you wish to test)
 7. Once there you can test out the routes!
