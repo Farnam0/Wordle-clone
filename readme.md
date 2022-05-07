@@ -2,9 +2,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## Contributors
-- **Chukwudi Ikem**
-- **Madison Jordan**
-- **James Talavera**
+- **Ramon Amini**
+- **Evan**
 - **Farnam Keshavarzian**
 
 ### Built With
@@ -15,6 +14,7 @@
 * [Uvicorn](https://www.uvicorn.org/)
 * [Sqlite-Utils](https://pypi.org/project/sqlite-utils/)
 * [MultipleDispatch](https://pypi.org/project/multipledispatch/)
+* [Redis](https://redis.io/docs/getting-started/)
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -33,8 +33,11 @@ To get a local copy up and running follow these simple example steps.
   ```sh
     python3 -m pip install 'fastapi[all]' sqlite-utils uvicorn multipledispatch pydantic
   ```
-
-
+* Install Redis
+  ```sh
+    sudo apt install --yes redis
+    sudo apt install --yes python3-hiredis
+  ```
 
 ### Final Steps
 
@@ -57,8 +60,14 @@ To get a local copy up and running follow these simple example steps.
    cd ../
    foreman start
    ```
-5. Travel to http://127.0.0.1:9999/api/checkings/docs or http://127.0.0.1:9999/api/statistics/docs or http://127.0.0.1:9999/api/validations/docs (depends on the values inputted for which service you wish to test)
-6. Once there you can test out the routes!
+5. Currently our standalone python script which updates the redis cache needs to be manually executed,
+   to do so please go in the standalone folder and run the MaterilizeScript.py 
+     ```sh
+   cd ./standalone
+   python3 MaterilizeScript.py
+   ```
+6. Travel to http://127.0.0.1:9999/api/checkings/docs or http://127.0.0.1:9999/api/statistics/docs or http://127.0.0.1:9999/api/validations/docs or http://127.0.0.1:9999/api/trackers/docs (depends on the values inputted for which service you wish to test)
+7. Once there you can test out the routes!
 
 
 
