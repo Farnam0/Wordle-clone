@@ -38,7 +38,12 @@ To get a local copy up and running follow these simple example steps.
     sudo apt install --yes redis
     sudo apt install --yes python3-hiredis
   ```
-
+* Files missing
+  ```sh 
+  There are two major files missing and this is due to github file size limitations.
+  traefik requires to be downloaded and placed within the proxy folder.
+  statistics.db can be requested from us and must be placed within the db folder. 
+  ```
 ### Final Steps
 
 1. Clone the repo
