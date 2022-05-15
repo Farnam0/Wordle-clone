@@ -62,10 +62,9 @@ To get a local copy up and running follow these simple example steps.
    foreman start
    ```
 5. Currently our standalone python script which updates the redis cache needs to be manually executed,
-   to do so please go in the standalone folder and run the MaterilizeScript.py 
+   to do so please make sure MaterilizeScript.py is in the root directory of the project 
      ```sh
-   cd ../standalone
-   ./MaterilizeScript
+   python3 MaterilizeScript.py
    ```
 6. Travel to http://127.0.0.1:9999/api/checkings/docs or http://127.0.0.1:9999/api/statistics/docs or http://127.0.0.1:9999/api/validations/docs or http://127.0.0.1:9999/api/trackers/docs (depends on the values inputted for which service you wish to test)
 7. Once there you can test out the routes!
