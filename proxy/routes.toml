@@ -2,7 +2,7 @@
   [http.middlewares]
 
     [http.middlewares.api-stripprefix.stripPrefix]
-      prefixes = ["/api/checkings", "/api/statistics","/api/validations"]
+      prefixes = ["/api/checkings", "/api/statistics","/api/validations", "/api/trackers"]
 
 
   [http.routers]
@@ -20,7 +20,12 @@
     [http.routers.validations-http]
       service = "validations"
       rule = "PathPrefix(`/api/validations`)"
-      middlewares = ["api-stripprefix"]      
+      middlewares = ["api-stripprefix"]
+
+    [http.routers.trackers-http]
+      service = "trackers"
+      rule = "PathPrefix(`/api/trackers`)"
+      middlewares = ["api-stripprefix"]       
 
   [http.services]
 
@@ -33,6 +38,11 @@
       [http.services.checkings.loadBalancer]
         [[http.services.checkings.loadBalancer.servers]]
           url = "http://127.0.0.1:5000"
+
+    [http.services.trackers]
+      [http.services.trackers.loadBalancer]
+        [[http.services.trackers.loadBalancer.servers]]
+          url = "http://127.0.0.1:5600"
 
     [http.services.statistics]
       [http.services.statistics.loadBalancer]
