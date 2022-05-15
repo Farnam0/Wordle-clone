@@ -41,7 +41,7 @@ To get a local copy up and running follow these simple example steps.
 * Files missing
   ```sh 
   There are two major files missing and this is due to github file size limitations.
-  traefik requires to be downloaded and placed within the proxy folder.
+  traefik requires to be downloaded and placed within the proxy folder. https://github.com/traefik/traefik/releases
   statistics.db can be requested from us and must be placed within the db folder. 
   ```
 ### Final Steps
